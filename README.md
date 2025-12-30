@@ -16,27 +16,13 @@ Ridge regression hyperparameter sweep (log-spaced \(\lambda\)) on the scikit-lea
 - Selects the **best** ridge model by **lowest validation MSE**
 - Uses the best polynomial ridge model to predict disease progression for a provided patient profile (Exercise 3.9 style)
 
-## Repository structure
+## Plots
 
-```text
-ridge-hyperparam-sweep/
-├─ .gitignore
-├─ requirements.txt
-├─ LICENSE
-├─ outputs/
-│  ├─ figures/
-│  └─ metrics/
-├─ src/
-│  ├─ datasets.py
-│  ├─ features.py
-│  ├─ models.py
-│  ├─ metrics.py
-│  ├─ experiments.py
-│  └─ plotting.py
-└─ scripts/
-   ├─ run_all.py
-   └─ predict_patient.py
-```
+### Ridge sweep on original features
+![Ridge Regression MSE vs Lambda (Original Features)](outputs/figures/ridge_mse_original_features.png)
+
+### Ridge sweep on polynomial features
+![Ridge Regression MSE vs Lambda (Polynomial Features)](outputs/figures/ridge_mse_poly_features.png)
 
 ## Setup
 
@@ -68,7 +54,7 @@ This will:
 
 - print train/validation MSEs for linear and ridge models
 - save the two plot images into `outputs/figures/`
-- write an optional metrics summary JSON to `outputs/metrics/run_summary.json`
+- write a metrics summary JSON to `outputs/metrics/run_summary.json`
 
 ### Run only the patient prediction (still re-computes best \(\lambda\) via sweep)
 
@@ -80,12 +66,9 @@ python scripts/predict_patient.py
 
 After running `scripts/run_all.py`, you should see:
 
-- **Figures**
-  - `outputs/figures/ridge_mse_original_features.png`
-  - `outputs/figures/ridge_mse_poly_features.png`
-
-- **Metrics**
-  - `outputs/metrics/run_summary.json` (created/overwritten each run)
+- `outputs/figures/ridge_mse_original_features.png`
+- `outputs/figures/ridge_mse_poly_features.png`
+- `outputs/metrics/run_summary.json` (created/overwritten each run)
 
 ## Notes on implementation
 
