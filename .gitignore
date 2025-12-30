@@ -1,0 +1,23 @@
+# Python junk
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+.env
+
+# OS/editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Outputs (keep figures tracked if you want them visible in GitHub)
+outputs/metrics/*.json
+
+# If you prefer NOT to commit generated figures, uncomment:
+# outputs/figures/*.png
