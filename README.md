@@ -34,7 +34,7 @@ GitHub Markdown doesn’t reliably support image resizing via `![](...)`, so the
 
 ## Setup
 
-### 1) Create and activate a virtual environment (recommended)
+### 1) Create and activate a virtual environment
 
 ```bash
 python -m venv .venv
