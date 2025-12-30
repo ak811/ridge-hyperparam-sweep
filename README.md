@@ -1,4 +1,4 @@
-# ridge-hyperparam-sweep
+# Ridge Regression Hyperparameter Sweep
 
 Ridge regression hyperparameter sweep (log-spaced \(\lambda\)) on the scikit-learn Diabetes dataset, with optional quadratic polynomial features (pairwise products + original features), including saved MSE-vs-\(\lambda\) plots and a patient-style prediction example.
 
